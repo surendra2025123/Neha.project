@@ -4,149 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work From Home Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Basic Styling for the page */
+        /* CSS Reset and Body Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #e6f7ff; /* Light blue background */
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
         }
+
+        /* Main Container mimicking the phone screen */
         .container {
             width: 100%;
             max-width: 400px;
             background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        header {
-            background-color: #38a3a5; /* Teal/blue color for the top section */
-            color: white;
-            padding: 20px;
+
+        /* Header Section (The teal/blue background) */
+        .header {
+            background-color: #8be1ed; /* Top background color */
+            color: #333;
+            padding: 40px 20px 0;
             text-align: center;
         }
-        .icon {
-            font-size: 40px;
+
+        /* Icon/Image Placeholder (using emoji for simple representation) */
+        .icon-block {
+            font-size: 3em;
             margin-bottom: 10px;
         }
-        h1 {
-            margin: 0;
-            font-size: 1.5em;
+
+        .header h1 {
+            font-size: 1.8em;
+            margin: 5px 0 10px;
+            font-weight: 700;
         }
-        .slogan {
-            font-size: 0.9em;
-            margin-top: 5px;
+
+        .header p {
+            font-size: 0.95em;
+            margin-top: 0;
+            margin-bottom: 25px;
         }
+
+        /* Telegram Button */
         .telegram-button {
-            display: block;
-            margin: 20px auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 15px 30px;
-            background-color: #0088cc; /* Telegram blue */
+            background: linear-gradient(135deg, #1e90ff, #0077cc); /* Gradient blue */
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: -25px; /* Pulls the button slightly into the white section */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Project Plans Section (The main white card) */
+        .project-plans-section {
+            background-color: white;
+            padding: 40px 20px 20px;
+            border-radius: 25px 25px 0 0;
+            position: relative;
+        }
+
+        .plan-header {
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s;
-        }
-        .telegram-button:hover {
-            background-color: #0077b3;
-        }
-        .project-plans {
-            padding: 20px;
-        }
-        .plan-title {
-            text-align: center;
-            font-weight: bold;
+            font-size: 1.1em;
+            font-weight: 700;
             margin-bottom: 20px;
+            color: #333;
         }
+
+        .plan-header input[type="checkbox"] {
+            margin-right: 8px;
+            pointer-events: none; /* Disable interaction */
+        }
+
+        /* Individual Project Box */
         .project-box {
-            background-color: #f0f8ff; /* Very light blue/off-white */
+            background-color: #f0f8ff; /* Very light blue background */
             border-radius: 10px;
             padding: 15px;
             margin-bottom: 15px;
-            border: 1px solid #dcdcdc;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
         }
+
         .project-box strong {
             display: block;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-            color: #38a3a5;
+            font-size: 1.05em;
+            margin-bottom: 8px;
+            color: #333;
+            line-height: 1.3;
         }
+
         .project-details {
             font-size: 0.9em;
-            line-height: 1.5;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
         }
+
         .payment {
             font-weight: bold;
             color: #e59400; /* Yellow/Gold for payment */
         }
+        
+        /* Footer */
         footer {
-            background-color: #38a3a5;
-            color: white;
-            padding: 15px;
+            background-color: #79d0df; /* Lighter teal footer */
+            color: #333;
+            padding: 20px;
             text-align: center;
-            font-size: 0.8em;
-            width: 100%;
-            max-width: 400px;
+            font-size: 0.75em;
+            border-radius: 0 0 0 0;
         }
         footer a {
-            color: #ffffff;
+            color: #333;
             text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="icon"></div>
+        <div class="header">
+            <div class="icon-block">🧑‍🤝‍🧑💬</div>
             <h1>Work From Home Projects</h1>
-            <p class="slogan">Choose your project plan and start earning today 💼</p>
+            <p>Choose your project plan and start earning today 💼</p>
             <a href="https://t.me/+i479we1wWlU4ZmZl" class="telegram-button">
                 🚀 Join Now on Telegram
             </a>
-        </header>
+        </div>
 
-        <section class="project-plans">
-            <div class="plan-title">
+        <div class="project-plans-section">
+            <div class="plan-header">
                 <input type="checkbox" checked disabled> Project Plans
             </div>
 
             <div class="project-box">
                 <strong>Project 1: 50 pages (front + back = 100)</strong>
                 <div class="project-details">
-                    🕒 Duration: 7 days |
-                    💰 Payment: <span class="payment">₹13,500</span>
+                    <span>🕒 Duration: 7 days</span>
+                    <span class="payment">💰 Payment: ₹13,500</span>
                 </div>
             </div>
 
             <div class="project-box">
                 <strong>Project 2: 90 pages (front + back = 180)</strong>
                 <div class="project-details">
-                    🕒 Duration: 10 days |
-                    💰 Payment: <span class="payment">₹19,000</span>
+                    <span>🕒 Duration: 10 days</span>
+                    <span class="payment">💰 Payment: ₹19,000</span>
                 </div>
             </div>
 
             <div class="project-box">
                 <strong>Project 3: 120 pages (front + back = 240)</strong>
                 <div class="project-details">
-                    🕒 Duration: 15 days |
-                    💰 Payment: <span class="payment">₹22,000</span>
+                    <span>🕒 Duration: 15 days</span>
+                    <span class="payment">💰 Payment: ₹22,000</span>
                 </div>
             </div>
 
             <div class="project-box">
                 <strong>Project 4: 190 pages (front + back = 380)</strong>
                 <div class="project-details">
-                    🕒 Duration: 26 days |
-                    💰 Payment: <span class="payment">₹28,000</span>
+                    <span>🕒 Duration: 26 days</span>
+                    <span class="payment">💰 Payment: ₹28,000</span>
                 </div>
             </div>
-        </section>
+        </div>
 
         <footer>
             © 2025 Work From Home Hub | Real Projects. Real Earnings.<br>
